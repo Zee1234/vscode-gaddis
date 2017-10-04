@@ -1,0 +1,40 @@
+{
+    "name": "gaddis-language-definitions",
+    "displayName": "gaddis-language-definitions",
+    "description": "Provides language definitions for the Gaddis pseudolanguage",
+    "version": "0.1.0",
+    "publisher": "Zee1234",
+    "engines": {
+        "vscode": "^1.16.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "main": "./gaddis.js",
+    "activationEvents": [
+        "onLanguage:gaddis"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "gaddis.addNumbers",
+                "title": "Gaddis: Number Lines"
+            },
+            {
+                "command": "gaddis.removeNumbers",
+                "title": "Gaddis: De-number Lines"
+            }
+        ],
+        "languages": [{
+            "id": "gaddis",
+            "aliases": ["Gaddis Pseudolanguage", "gaddis"],
+            "extensions": [".gaddis"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "gaddis",
+            "scopeName": "source.gaddis",
+            "path": "./syntaxes/gaddis.tmLanguage.json"
+        }]
+    }
+}

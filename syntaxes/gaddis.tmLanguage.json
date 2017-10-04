@@ -1,0 +1,99 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Gaddis Pseudolanguage",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.gaddis",
+				"match": "\\b(If|Then|Else|End|While|Do|Until|For|Module|Function|Class|New|Declare|Constant|To|In|Each|Select|Case|Default)\\b"
+			},
+			{
+				"name": "keyword.operator.gaddis",
+				"match": "\\b(AND|OR|NOT|>|<|<=|>=|==|!=|\\+|-|\\*|/|MOD|\\^)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.gaddis",
+			"begin": "\"",
+			"beginCaptures":[  
+				{  
+					"name":"punctuation.definition.string.begin.gaddis"
+				}
+			],
+			"end": "\"",
+			"endCaptures":[  
+				{  
+					"name":"punctuation.definition.string.end.gaddis"
+				}
+			],
+			"patterns": [
+				{
+					"name": "constant.character.escape.gaddis",
+					"match": "\\\\."
+				}
+			]
+		},
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\b(Integer|Real|String|Float|Boolean)\\b"
+				}
+			]
+		},
+		"support": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "\\b(Input|Display|Call|Open|Read|Write|Close|Rename|Delete)\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.gaddis",
+					"match": "(//).*$\n?",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.comment.gaddis"
+						}
+					}
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b(\\-?\\s*[0-9]*\\.?[0-9]*)\\b"
+				},
+				{
+					"name": "constant.language",
+					"match": "\\b(True|False)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.gaddis"
+}
