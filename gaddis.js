@@ -36,7 +36,7 @@ module.exports =  {
       let editor = window.activeTextEditor
       editor.edit( editBuilder => {
         for (let i = 0; i < editor.document.lineCount; i++) {
-          editBuilder.insert(new vscode.Position(i, 0), format(i))
+          editBuilder.insert(new vscode.Position(i, 0), format(i+1))
         }
       })
     })

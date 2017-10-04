@@ -2,7 +2,7 @@
     "name": "gaddis-language-definitions",
     "displayName": "gaddis-language-definitions",
     "description": "Provides language definitions for the Gaddis pseudolanguage",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "Zee1234",
     "repository": "https://github.com/Zee1234/vscode-gaddis",
     "engines": {

@@ -28,3 +28,7 @@ This extension provides some basic language support for the Gaddis Pseudolanguag
 ### 0.1.0
 
 Initial release
+
+### 0.1.1
+
+Line numbering no longer starts at 0
