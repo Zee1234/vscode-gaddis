@@ -4,6 +4,7 @@
     "description": "Provides language definitions for the Gaddis pseudolanguage",
     "version": "0.1.0",
     "publisher": "Zee1234",
+    "repository": "https://github.com/Zee1234/vscode-gaddis",
     "engines": {
         "vscode": "^1.16.0"
     },
